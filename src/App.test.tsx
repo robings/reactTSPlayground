@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import App from "./App";
 import appStrings from "./app.strings";
@@ -96,9 +96,11 @@ test("closes top sheet on clicking close button", async () => {
 
   userEvent.click(closeButton);
 
-  expect(
-    screen.queryByRole("button", {
-      name: appStrings.topSheet.cancelButton,
-    })
-  ).not.toBeInTheDocument();
+  await waitFor(() => {
+    expect(
+      screen.queryByRole("button", {
+        name: appStrings.topSheet.cancelButton,
+      })
+    ).not.toBeInTheDocument();
+  });
 });

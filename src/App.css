@@ -56,7 +56,6 @@ button:disabled {
   margin: 0;
   padding: 5px;
   overflow: auto;
-
 }
 
 .dropdown header h2, .modalContent header h2 {
@@ -116,13 +115,17 @@ form button:hover {
 
 .inputGroup input {
   flex: 2;
-  border: 1px solid var(--dropdown-text-colour);
-  background-color: var(--input-background-colour);
-  color: var(--text-colour);
   border-radius: 0.25em;
   margin-left: 5px;
   min-height: 20px;
   outline: none;
+}
+
+form input {
+  border: 1px solid var(--dropdown-text-colour);
+  background-color: var(--input-background-colour);
+  color: var(--text-colour);
+
 }
 
 .buttonGroup {
@@ -167,4 +170,8 @@ button:last-child {
 
 .ReactModal__Overlay--before-close{
   opacity: 0;
+}
+
+section {
+  overflow: auto;
 }
