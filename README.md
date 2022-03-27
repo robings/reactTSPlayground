@@ -1,3 +1,6 @@
+# React TypeScript Playground
+A create-react-app with the typescript template for practicing random React stuff.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

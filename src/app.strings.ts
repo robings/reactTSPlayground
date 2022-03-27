@@ -1,5 +1,5 @@
 const appStrings = {
-  title: "React Typescript Playground",
+  title: "React TypeScript Playground",
   close: "X",
   openTopSheet: "Open Top Sheet",
   openModal: "Open Modal",
