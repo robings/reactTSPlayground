@@ -1,38 +1,170 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.appHeader {
+  font-size: 16px;
+  border-bottom: 1px solid;
+  padding: 10px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  background-color: transparent;
+  border: 1px solid;
+  border-radius: 0.3em;
+  color: inherit;
+  cursor: pointer;
+  padding: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:disabled {
+  color: var(--disabled-colour);
+  cursor: initial;
+}
+
+.dropdown {
+  width: 300px;
+  height: fit-content;
+  background-color: rgba(40, 44, 52, 0.75);
+  color: var(--dropdown-text-colour);
+  border: 1px solid var(--dropdown-text-colour);
+  border-radius: 0.25em;
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.dropdownInvisible {
+  opacity: 0;
+}
+
+.dropdownVisible {
+  opacity: 1;
+}
+
+.dropdown header {
+  background-color: var(--dropdown-text-colour);
+  color: var(--background-colour);
+  margin: 0;
+  padding: 5px;
+  overflow: auto;
+}
+
+.modalContent header {
+  background-color: var(--modal-text-colour);
+  color: var(--modal-background-colour);
+  margin: 0;
+  padding: 5px;
+  overflow: auto;
+
+}
+
+.dropdown header h2, .modalContent header h2 {
+  margin: 0;
+  float: left;
+}
+
+.dropdown header button, .modalContent header button {
+  float: right;
+  border-radius: 25%;
+  margin-left: 5px;
+  padding: 1px 6px;
+}
+
+.dropdown header button:hover {
+  color: var(--button-hover-colour);
+}
+
+.dropdown header button:first-of-type, .modalContent header button:first-of-type {
+  font-size: 18px;
+}
+
+.dropdownContents {
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.dropdownContentsVisible {
+  max-height: 300px;
+}
+
+.dropdownContentsHidden {
+  max-height: 0;
+}
+
+form {
+  padding: 10px;
+}
+
+form button {
+  background-color: var(--input-background-colour);
+  color: var(--text-colour);
+  border-color: var(--dropdown-text-colour);
+}
+
+form button:hover {
+  background-color: var(--text-colour);
+  color: var(--background-colour);
+}
+
+.inputGroup {
+  margin-bottom: 5px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.inputGroup input {
+  flex: 2;
+  border: 1px solid var(--dropdown-text-colour);
+  background-color: var(--input-background-colour);
+  color: var(--text-colour);
+  border-radius: 0.25em;
+  margin-left: 5px;
+  min-height: 20px;
+  outline: none;
+}
+
+.buttonGroup {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+button:last-child {
+  margin-left: 5px;  
+}
+
+.modalContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 300px;
+  background-color: var(--modal-background-colour);
+  color: var(--modal-text-colour);
+  border: 1px solid;
+  border-radius: 0.25em;
+}
+
+.modalContent section {
+  padding: 5px;
+  overflow: auto;
+}
+
+.bottomRight {
+  float: right;
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close{
+  opacity: 0;
 }
