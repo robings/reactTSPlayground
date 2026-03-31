@@ -1,3 +1,6 @@
+> [!NOTE]
+> Archiving due to `create-react-app` obsolescense.
+
 # React TypeScript Playground
 A create-react-app with the typescript template for practicing random React stuff.
 
